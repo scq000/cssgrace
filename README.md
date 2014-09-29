@@ -5,7 +5,7 @@
 
 --------------
 
-CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS Grace 也能做，他们不能的，CSS Grace 也可以。而且不改变 CSS 原生的语法，让 CSS 写起来更简单，更优雅。
+CSS Grace 是一个由 Node.js 驱动，面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS Grace 也能做，他们不能的，CSS Grace 也可以。最重要的是不改变 CSS 原生的语法，让 CSS 写起来更简单，更优雅。
 
 
 
@@ -64,9 +64,14 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
   ```
 
   输出
+
   ```css
   .foo:after {
     position: absolute;
+  }
+
+  .bar:first-line {
+    color: #333;
   }
   ```
 
@@ -195,7 +200,7 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
 
 5. resize
 
-  resize 只有在 overflow 不为 visible 时生效
+  resize 只有在 overflow 不为 visible 时才生效
 
   输入
 
@@ -234,7 +239,7 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
   }
   ```
 
-  现在只需在CSS中使用 clear: fix 即可。
+  现在只需在CSS中使用 ```clear: fix``` 即可。
 
   输入
 
@@ -334,7 +339,7 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
 
 2. -webkit-text-size-adjust: none 改为 100%
 
-  -webkit-text-size-adjust: none 会导致页面字号无法缩放，影响页面的可用性，尤其是在移动设备上。
+  ```-webkit-text-size-adjust: none``` 会导致页面字号无法缩放，影响页面的可用性，尤其是在移动设备上。
 
   输入
 
@@ -352,3 +357,20 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
   }
   ```
 
+## 面向未来的 CSS 工作流
+
+  1. 使用 autoprefixer 自动增加前缀，抛弃 Sass/Less 繁杂且不健全的前缀 mixin。
+  2. 使用 PostCSS 的一系列CSS 未来语法插件支持 CSS 原生变量（[postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)）等。
+  3. 使用 CSS Grace 自动优化代码，兼容低版本 IE。
+  4. 使用 [CSSLint](https://github.com/CSSLint) 检查 CSS 语法。
+  5. 使用 [clean-css](https://github.com/jakubpawlowicz/clean-css) 或 [CKStyle](https://github.com/wangjeaf/ckstyle-node)压缩合并 CSS 文件。
+
+
+## 致谢
+
+CSS Grace 基于 [PostCSS](https://github.com/postcss/postcss)，感谢 Andrey Sitnik 开发了这么好的 CSS 解析器以及在本插件开发过程中给予帮助。
+
+
+## Licence
+
+MIT
