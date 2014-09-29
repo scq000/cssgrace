@@ -1,3 +1,5 @@
+<div class="main" style="width: 46em; margin: auto;">
+
 # CSS Grace
 
   >**从今天起，写简单优雅面向未来的 CSS。**
@@ -350,4 +352,4 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
     -webkit-text-size-adjust: 100%;
   }
   ```
-
+</div>
