@@ -26,7 +26,7 @@ CSS Grace 是一个由 Node.js 驱动，面向未来的 CSS 后处理工具，Sa
   var cssgrace = require('cssgrace');
 
   var css = fs.readFileSync('input.css', 'utf8');
-  fs.writeFileSync('output.css', cssgrace.process(css).css);
+  fs.writeFileSync('output.css', cssgrace(css));
   ```
 
 4. 在 test 目录新增一个 input.css, 注意编码要和 ```fs.readFileSync``` 中的保持一致。输入测试的CSS代码片段，比如：
@@ -40,7 +40,7 @@ CSS Grace 是一个由 Node.js 驱动，面向未来的 CSS 后处理工具，Sa
   }
   ```
 
-5. 在命令行中执行 ```node test.js```，快去看看 output.css 中发生了什么吧！
+5. 在命令行中执行 ```npm test```，快去看看 output.css 中发生了什么吧！
 
 
 ## 功能
