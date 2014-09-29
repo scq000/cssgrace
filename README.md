@@ -359,7 +359,7 @@ CSS Grace 是一个由 Node.js 驱动，面向未来的 CSS 后处理工具，Sa
 
 ## 面向未来的 CSS 工作流
 
-  1. 使用 autoprefixer 自动增加前缀，抛弃 Sass/Less 繁杂且不健全的前缀 mixin。
+  1. 使用 [Autoprefixer](https://github.com/postcss/autoprefixer) 自动增加前缀，抛弃 Sass/Less 繁杂且不健全的前缀 mixin。
   2. 使用 PostCSS 的一系列CSS 未来语法插件支持 CSS 原生变量（[postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)）等。
   3. 使用 CSS Grace 自动优化代码，兼容低版本 IE。
   4. 使用 [CSSLint](https://github.com/CSSLint) 检查 CSS 语法。
