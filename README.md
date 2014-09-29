@@ -91,7 +91,7 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
   }
   ```
 
-<hr>
+--------------
 ### mixin
 
 1. rgba 转换为滤镜
@@ -265,7 +265,7 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
   }
   ```
 
-<hr>
+--------------
 
 ### 让浏览器支持暂未实现的 CSS3 新特性
 
@@ -297,7 +297,7 @@ CSS Grace 是一个面向未来的 CSS 后处理工具，Sass/Less 能做的 CSS
 
   CSS Grace 会自动计算 margin 中的值，麻麻再也不用担心我算术不好了。
 
-<hr>
+--------------
 
 ### 修复常见错误
 
