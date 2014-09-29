@@ -1,3 +1,4 @@
+var fs = require("fs");
 var should = require('should')
 var heredoc = require('heredoc')
 var parser = require('../')
@@ -24,6 +25,49 @@ describe('css process', function() {
 }
     */})
 
-    should(parser(input)).be.exactly(output)
+    should(parser(input).css).be.exactly(output)
   })
+
+  it('after parse', function() {
+    var input = heredoc(function() {/*
+  .foo::after {
+    position: absolute;
+  }
+
+  .bar::first-line {
+    color: #333;
+  }
+    */})
+
+    var output = heredoc(function() {/*
+  .foo:after {
+    content: '';
+    position: absolute;
+  }
+
+  .bar:first-line {
+    color: #333;
+  }
+    */})
+
+    should(parser(input).css).be.exactly(output)
+    })
+
+  it('opacity parse', function() {
+    var input = heredoc(function() {/*
+  .foo {
+    opacity: .6;
+  }
+    */})
+
+    var output = heredoc(function() {/*
+  .foo {
+    opacity: .6;
+    filter: alpha(opacity=60);
+  }
+    */})
+
+    should(parser(input).css).be.exactly(output)
+    })
+
 })
