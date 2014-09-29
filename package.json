@@ -1,0 +1,20 @@
+{
+  "name": "cssgrace",
+  "version": "0.1.0",
+  "description": "CSS 后处理器框架",
+  "keywords": ["css", "postcss", "proccessor", "postproccessor", ""],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yisi <yiorsi@gmail.com>",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+     "postcss": "^2.0.0"
+   }
+}
