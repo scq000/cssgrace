@@ -4,3 +4,5 @@ node_modules
 *.swo
 .idea/
 *.iml
+test/fixtures/*.actual.css
+*.sublime-workspace

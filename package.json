@@ -1,29 +1,40 @@
 {
   "name": "cssgrace",
-  "version": "0.1.0",
-  "description": "CSS 后处理器框架",
-  "keywords": [
-    "css",
-    "postcss",
-    "proccessor",
-    "postproccessor",
-    ""
-  ],
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "CSS postproccessor",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "tape test"
   },
-  "author": "yisi <yiorsi@gmail.com>",
-  "homepage": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/postcss/postcss-media-minmax.git"
   },
+  "keywords": [
+    "css",
+    "css3",
+    "postcss",
+    "postcss-plugins",
+    "proccessor",
+    "postproccessor"
+  ],
+  "author": "yisi",
   "license": "MIT",
-  "dependencies": {
-    "heredoc": "^1.2.0",
-    "mocha": "^1.21.4",
-    "postcss": "^2.2.5",
-    "should": "^4.0.4"
-  }
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "README-zh.md",
+    "LICENSE",
+    "index.js"
+  ],
+  "devDependencies": {
+    "postcss": "^3.0.7",
+    "image-size": "^0.3.5",
+    "image-size": "^",
+    "tape": "^3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/postcss/postcss-media-minmax/issues"
+  },
+  "homepage": "https://github.com/postcss/postcss-media-minmax"
 }
