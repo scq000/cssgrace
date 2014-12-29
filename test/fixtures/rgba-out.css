@@ -1,7 +1,9 @@
 .foo {
   background: rgba(153, 85, 102, 0.3);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c995566', endColorstr='#4c995566');
-}:root .foo {
+}
+
+:root .foo {
   filter: none\9;
 }
 
