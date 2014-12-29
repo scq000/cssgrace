@@ -26,8 +26,8 @@
   only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
-.foo {
-  background-image: url(./test/img/yuxifan@2x.jpg);
-  background-size: 320px 427px
-}
+  .foo {
+    background-image: url(./test/img/yuxifan@2x.jpg);
+    background-size: 320px 427px
+  }
 }
