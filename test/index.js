@@ -1,29 +1,75 @@
-var fs = require("fs")
+var fs = require('fs')
 
-var test = require("tape")
+var test = require('tape')
 
-var postcss = require("postcss")
-var plugin = require("..")
+var postcss = require('postcss')
+var plugin = require('..')
 
-function filename(name) { return "test/" + name + ".css" }
-function read(name) { return fs.readFileSync(name, "utf8") }
+function filename(name) { return 'test/' + name + '.css' }
+function read(name) { return fs.readFileSync(name, 'utf8') }
 
 function compareFixtures(t, name, msg, opts, postcssOpts) {
   postcssOpts = postcssOpts || {}
-  postcssOpts.from = filename("fixtures/" + name)
+  postcssOpts.from = filename('fixtures/' + name)
   opts = opts || {}
-  // var actual = postcss().use(plugin(css)).process(read(postcssOpts.from), postcssOpts).css
+  var actual = postcss().use(plugin).process(read(postcssOpts.from), postcssOpts).css
 
-  console.log('aaa-----',read(postcssOpts.from))
-  console.log('bbbs-----',plugin(css))
-
-  var expected = read(filename("fixtures/" + name + ".output"))
-  fs.writeFile(filename("fixtures/" + name + ".actual"), actual)
+  var expected = read(filename('fixtures/' + name + '-out'))
+  fs.writeFile(filename('fixtures/' + name + '-real'), actual)
   t.equal(actual.trim(), expected.trim(), msg)
 }
 
-test("@meida", function(t) {
-  compareFixtures(t, "inline-block", "should transform")
+test('remove display', function(t) {
+  compareFixtures(t, 'remove-display', 'Should be remove display property')
+  t.end()
+})
 
+test('remove colons', function(t) {
+  compareFixtures(t, 'remove-colons', 'Should be remove colons')
+  t.end()
+})
+
+test('position center mixin', function(t) {
+  compareFixtures(t, 'position-center', 'Should be transform')
+  t.end()
+})
+
+test('ellipsis mixin', function(t) {
+  compareFixtures(t, 'ellipsis', 'Should be transform')
+  t.end()
+})
+
+test('resize mixin', function(t) {
+  compareFixtures(t, 'resize', 'Should be transform')
+  t.end()
+})
+
+test('clearfix mixin', function(t) {
+  compareFixtures(t, 'clearfix', 'Should be transform')
+  t.end()
+})
+
+test('IE opacity hack', function(t) {
+  compareFixtures(t, 'ie-opacity', 'Should be added filter')
+  t.end()
+})
+
+test('IE rgba hack', function(t) {
+  compareFixtures(t, 'bg-rgba', 'Should be added filter and :root selector')
+  t.end()
+})
+
+test('inline-block hack', function(t) {
+  compareFixtures(t, 'inline-block', 'Should be added *display: inline and *zoom: 1')
+  t.end()
+})
+
+test('image set mixin', function(t) {
+  compareFixtures(t, 'image-set', 'Should be transform')
+  t.end()
+})
+
+test('test \n', function(t) {
+  compareFixtures(t, 'rgba', 'Should be transform')
   t.end()
 })

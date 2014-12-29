@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/postcss/postcss-media-minmax.git"
+    "url": ""
   },
   "keywords": [
     "css",
@@ -36,5 +36,5 @@
   "bugs": {
     "url": "https://github.com/postcss/postcss-media-minmax/issues"
   },
-  "homepage": "https://github.com/postcss/postcss-media-minmax"
+  "homepage": ""
 }
